@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--<script src="tes.js"></script>-->
+</head>
+<body>
+    <script>
+        if (true) {
+            import("./tes.js").then(() => {
+                console.log("uspjeh");
+            })
+        }
+        setTimeout(function(){
+            console.log("nakon");
+        }, 500);
+        console.log("html");
+        var a = "a";
+        //console.log(c);
+        var obj = new Object();
+        Object.defineProperties(obj, {
+            a: {
+                writable: true,
+                enumerable: true,
+                configurable: true,
+                value: 'a'
+            },
+            b: {
+                writable: true,
+                enumerable: false,
+                configurable: false,
+                value: 'b'
+            }
+        });
+        var arr = [2, 4];
+        var arr2 = [2, "2", 3];
+        console.log(arr2);
+        arr.d = 3;
+        arr[3] = 10;
+        var [,,a,c] = arr;
+        console.log(c);
+            var iterator = arr[Symbol.iterator]();
+            console.log(iterator);
+        do {
+            var { value, done } = iterator.next();
+            console.log(`done : ${done} || value: ${value}`);
+        } while (!done);
+
+
+
+
+        //console.log(obj);
+        /*for (key of obj) {
+            console.log(key);
+        }
+        delete obj.b;
+        console.log(obj);*/
+        function Con() {
+            this.a = 3;
+            var b = 5;
+        }
+        Object.assign(Con.prototype, {
+            b : 5
+        })
+        var con = new Con();
+        console.log(con.b);
+
+        function fibonnaciContainer() {
+            var cache = {};
+
+            return function fibonacci(n){
+                if (n in cache) {
+                    return cache[n];
+                } else if (n < 2) {
+                    return n;
+                } else {
+                    cache[n] = fibonacci(n-1) + fibonacci(n-2);
+                    return cache[n];
+                }
+            }
+        }
+
+        var fib = fibonnaciContainer();
+        console.log(fib(6));
+
+        function testScopes(a = 2){
+            console.log(a);
+            var a = 4;
+
+        }
+
+        testScopes();
+    </script>
+</body>
+</html>
