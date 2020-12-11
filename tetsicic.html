@@ -5,6 +5,11 @@
   <button data-action="load">Load</button>
   <button data-action="search">Search</button>
 </div>
+<div id="ola" onclick="console.log(event);">
+  <div class="absolute" style="display: block; position: absolute; width: 100px; left: 100px; right:100px">absolute</div>
+  <div class="relative" style="display: block; position: relative; width: 100px; left: 100px; right:100px">relative</div>
+
+</div>
 
 <script>
   class Menu {
@@ -26,6 +31,7 @@
     }
 
     onClick(event) {
+      console.log(event);
       let action = event.target.dataset.action;
       if (action) {
         this[action]();
@@ -33,6 +39,19 @@
     };
   }
 
-  new Menu(menu);
+
+console.log(window.ola.click);
+  //new Menu(menu);
+  //new Menu(ola);
+  ola.onclick = function(event) {
+    console.log(event);
+  }
+
+var olaJS = document.getElementById("ola");
+console.dir(olaJS);
+
+  document.getElementById("ola").addEventListener("click", (event) => {
+    console.log(event.currentTarget);
+  });
 </script>
 </body>
