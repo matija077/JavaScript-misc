@@ -8,6 +8,8 @@
       color: green;
     }
   </style>
+  <script src="module.js" type="module"></script>
+  <script src="testpromise.js"></script>
 </head>
 <body>
 <div id="menu">
@@ -16,7 +18,9 @@
   <button data-action="search">Search</button>
 </div>
 <div id="ola" onclick="console.log(event);">
-  <div class="absolute" style="display: block; position: absolute; width: 100px; left: 100px; right:100px">absolute</div>
+  <div class="absolute" style="display: block; position: absolute; width: 100px; left: 100px; right:100px; margin:100px">absolute</div>
+  <div class="absolute" style="display: block; position: absolute; width: 100px; left: 100px; right:100px; margin:100px">absolute</div>
+  <div class="relative" style="display: block; position: relative; width: 100px; left: 100px; right:100px">relative</div>
   <div class="relative" style="display: block; position: relative; width: 100px; left: 100px; right:100px">relative</div>
 
 </div>
@@ -44,8 +48,26 @@
   <div class="specificityDiv">what color am i</div>
 </div>
 
+<div
+  style="position: sticky;
+  width: 20vw;
+  height: 20vh;
+  top: 40vh;
+  left: 40vw;
+  display: inline;"
+>
+sdasd
+</div>
+<br>
+<div
+  style="height: 1000px"
+>
+sdgsgsdg
+</div>
+
 
 <script>
+  'use strict'
   class Menu {
     constructor(elem) {
       this._elem = elem;
@@ -73,6 +95,9 @@
     };
   }
 
+  console.log("olaaa");
+ 
+
 
 console.log(window.ola.click);
   //new Menu(menu);
@@ -87,6 +112,8 @@ console.dir(olaJS);
   document.getElementById("ola").addEventListener("click", (event) => {
     console.log(event.currentTarget);
   });
+
+  
 </script>
-<script src="testpromise.js"></script>
+
 </body>
