@@ -7,7 +7,7 @@ export default function fu() {
 fu();
 console.log(window);
 var c = 5;
-//import test2 from './tes2.js';
-import ("./tes2.js").then(() => {
+import test2 from './tes2.js';
+/*import ("./tes2.js").then(() => {
 
-})
+})*/

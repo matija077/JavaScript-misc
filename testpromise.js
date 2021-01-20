@@ -1,3 +1,4 @@
+console.log("before moduel as async");
 function a (promise) {
     console.log("usao u unufkinciju");
     return new Promise(function(resolve, reject) {

@@ -8,7 +8,7 @@
       color: green;
     }
   </style>
-  <script src="module.js" type="module"></script>
+  <script src="module.js"></script>
   <script src="testpromise.js"></script>
 </head>
 <body>
@@ -96,7 +96,10 @@ sdgsgsdg
   }
 
   console.log("olaaa");
- 
+  setTimeout(() => {
+    console.log("akde sam");
+  }, 2000)
+
 
 
 console.log(window.ola.click);
@@ -113,7 +116,5 @@ console.dir(olaJS);
     console.log(event.currentTarget);
   });
 
-  
 </script>
 
-</body>

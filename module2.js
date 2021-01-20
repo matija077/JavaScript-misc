@@ -1,5 +1,7 @@
 export default "3"
 
-console.log(t);
+console.log("adasdasd");
 
-console.log(ola);
+import "./tes.js";
+
+//console.log(ola);
