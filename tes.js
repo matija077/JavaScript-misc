@@ -1,4 +1,6 @@
-
+setTimeout(() => {console.log(t);}, 4000);
+setTimeout(() => {console.log(globalThis);}, 4000);
+console.log(t)
 console.log("test js");
 console.log(this);
 export default function fu() {

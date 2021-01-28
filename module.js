@@ -11,10 +11,10 @@ var as ="a";
 
 
 console.log("module");
-setTimeout(() => {import module2 from './module2.js'});
+//setTimeout(() => {import module2 from './module2.js'});
 
 
 
-/*import('./module2.js').then(function resolved(result) {
-    console.log(result);
-})*/
+import('./module2.js').then(function resolved(result) {
+    //console.log(result);
+})
