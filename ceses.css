@@ -1,0 +1,96 @@
+body {
+    box-sizing: content-box;
+}
+
+#parent {
+    overflow: hidden;
+    display: inline;
+
+}
+
+#middle {
+   overflow: hidden;
+
+}
+
+#child {
+}
+
+#prvi {
+    display: block;
+    max-width: 400px;
+    max-height: 200px;
+    height: 400px;
+    outline: 1px;
+    outline: 1px red solid;
+    transition: margin 2s, font-size 2s;
+    width: fit-content;
+    margin: auto;
+}
+
+#prvi:hover {
+    font-size: 50px;
+    margin: 100px;
+}
+
+#drugi {
+    display: inline-block;
+
+    height: 200px;
+    outline: 1px red solid;
+}
+
+.container {
+    margin: auto;
+    width: 200px;
+    padding: 10px;
+    backdrop-filter: blur(100px);
+    border: solid 2px;
+    background: url("./assets/sun.png");
+    background-clip: content-box;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: scroll;
+    opacity: 0.5;
+
+
+}
+
+/*.container::after {
+    content: "";
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}*/
+
+.container:hover {
+    animation: anim 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes anim {
+    to {
+        filter: grayscale(1);
+    }
+}
+
+.stacking{
+    position: absolute;
+    width: 200px;
+    margin: auto;
+}
+
+.stacking:nth-child(1) {
+    z-index: auto;
+    background-color: green;
+}
+
+.stacking:nth-child(2) {
+    background-color: red;
+    z-index: -1;
+}
