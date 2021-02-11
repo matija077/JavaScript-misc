@@ -48,7 +48,9 @@ body {
     padding: 10px;
     backdrop-filter: blur(100px);
     border: solid 2px;
-    background: url("./assets/sun.png");
+
+    background: blue url("./assets/sun.png") ;
+
     background-clip: content-box;
     background-size: cover;
     background-repeat: no-repeat;
@@ -56,8 +58,14 @@ body {
     background-attachment: scroll;
     opacity: 0.5;
 
-
 }
+
+@media only screen and (max-width: 800px) {
+    .container {
+        background: url("./assets/download.jpg");
+    }
+}
+
 
 /*.container::after {
     content: "";
@@ -95,4 +103,32 @@ body {
 .stacking:nth-child(2) {
     background-color: red;
     z-index: -1;
+}
+
+#nav {
+    height: 800px;
+    background: url("./assets/sun.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+}
+
+#nav div:hover {
+    color: red;
+
+}
+
+#nav p {
+    color: initial;
+    transition: 5s;
+
+}
+
+#nav p:hover {
+
+    color: blue;
+    border-radius: 50%;
+    border-color: black;
+    background-color: white;
+
 }
