@@ -1,0 +1,12 @@
+body {
+    font-size: 30px;
+}
+
+@media all and (max-width: 400px) {
+    p{
+        background-image: url('./assets/download.jpg');
+        font-size: 5px;
+    }
+}
+
+/* media="(max-width: 600px)"*/
