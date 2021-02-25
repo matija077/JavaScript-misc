@@ -18,3 +18,5 @@ console.log("module");
 import('./module2.js').then(function resolved(result) {
     //console.log(result);
 })
+
+import tes from './tes.js';

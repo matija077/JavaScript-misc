@@ -1,6 +1,6 @@
 <!doctype html>
 <head>
-  
+
   <style>
     .specificity div {
       color: red;
@@ -10,7 +10,7 @@
     }
   </style>
   <link rel="stylesheet" href="./tes.css" media="(max-width: 600px)" ></link>
-  <script src="module.js"></script>
+  <script src="module.js" async type="module"></script>
   <script src="testpromise.js"></script>
 </head>
 <body>
@@ -118,5 +118,10 @@ console.dir(olaJS);
     console.log(event.currentTarget);
   });
 
+  queueMicrotask(() =>  {
+    setTimeout(() => {
+      console.log("aha aha");
+    })
+  },  2000)
 </script>
 
