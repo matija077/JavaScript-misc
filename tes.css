@@ -1,5 +1,10 @@
+:root {
+    --color: red;
+    font-size: 62.5%;
+}
+
 body {
-    font-size: 30px;
+
 }
 
 @media all and (max-width: 400px) {
@@ -7,6 +12,14 @@ body {
         background-image: url('./assets/download.jpg');
         font-size: 5px;
     }
+}
+
+.themePlay {
+    background-color: var(--color);
+    border-radius: 15%/55%;
+    border: 5em black solid;
+    position: sticky;
+    top: 0;
 }
 
 /* media="(max-width: 600px)"*/
