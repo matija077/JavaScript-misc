@@ -37,3 +37,44 @@ body {
 }
 
 /* media="(max-width: 600px)"*/
+
+.flex {
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.flex * {
+    border: 2px solid black;
+    height: 20px;
+}
+
+.flex:first-child {
+    background-color: red;
+}
+
+#prvi{
+    height: 30px
+}
+
+#inlineParent {
+    border: blue 2px solid
+}
+
+.inlineParent{
+    display: inline-block;
+    height: 100px;
+    text-align: center;
+    width: 200px !important;
+    border: red 2px solid;
+}
+
+.inline {
+    display: inline;
+}
+
+table tr:first-child {
+    font-size: 40px;
+}
