@@ -71,4 +71,14 @@
     <div>
         abs2
     </div>
+    <div id="test parent">
+
+    </div>
+    <script>
+       const parent =  document.getElementById("test parent");
+       console.dir(parent);
+       parent.append(document.createElement("a"));
+       parent.innerText = "aaa";
+       console.dir(parent);
+    </script>
 </body>
