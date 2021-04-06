@@ -132,3 +132,80 @@ body {
     background-color: white;
 
 }
+
+#left-middle {
+    display: inline-block;
+    position: relative;
+    margin-right: -140px;
+    background-color: green;
+    z-index: 30;
+}
+
+#right-middle {
+    display: inline-block;
+    background-color: gray;
+    z-index: 0;
+}
+
+#left-child {
+    display: inline-block;
+    position: relative;
+    z-index: -1;
+    margin-right: -10px;
+    background-color: red;
+}
+
+#right-child {
+    display: inline-block;
+    position: relative;
+    z-index: 6;
+    background-color: blue;
+}
+
+.green {
+    line-height: 1;
+    border: solid limegreen;
+  }
+
+  .red {
+    line-height: 2em;
+    border: solid red;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .box {
+    width: 18em;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 15px;
+  }
+
+  .aspect {
+      position: relative;
+      height: 0;
+      padding-bottom: 20%;
+      overflow-y: hidden;
+      max-height: 100px;
+  }
+
+  .aspect_child {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      outline: solid red 2px;
+      top: 0;
+      left: 0;
+      top: 10px;
+  }
+
+  .aspect:hover {
+     overflow-y: scroll;
+     max-height: 600px
+  }
+
+  * + * {
+      margin-top: 10px;
+  }

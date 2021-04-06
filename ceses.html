@@ -72,13 +72,41 @@
         abs2
     </div>
     <div id="test parent">
-
     </div>
+    <div id="top">
+        <div id="left-middle">
+            left middle
+        </div>
+        <div id="right-middle">
+            right middle
+            <div id="left-child">
+                text <span>aa</span> mroe text
+            </div>
+            <div id="right-child">asdasd</div>
+        </div>
+    </div>
+
+    <div class="box green">
+        <h1>Avoid unexpected results by using unitless line-height.</h1>
+         length and percentage line-heights have poor inheritance behavior ...
+       </div>
+
+       <div class="box red">
+        <h1>Avoid unexpected results by using unitless line-height.</h1>
+         length and percentage line-heights have poor inheritance behavior ...
+       </div>
+
+       <br><br>
+       <div class="aspect">23
+        <div class="aspect_child">1234ds asd</div>
+       </div>
+
     <script>
        const parent =  document.getElementById("test parent");
        console.dir(parent);
        parent.append(document.createElement("a"));
        parent.innerText = "aaa";
        console.dir(parent);
+       console.dir(document.getElementById("left-child"));
     </script>
 </body>
