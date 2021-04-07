@@ -78,3 +78,26 @@ body {
 table tr:first-child {
     font-size: 40px;
 }
+
+.parent_margin {
+    margin: auto;
+    position: relative;
+    left: 100px;
+    transition: 2s color;
+    width: 400px;
+}
+
+.parent_margin:hover {
+    color: red;
+}
+
+.images {
+    width: 500px;
+    padding: 2rem;
+    margin: 1rem;
+}
+
+.images > img {
+    object-fit: fill;
+    object-position: left;
+}
