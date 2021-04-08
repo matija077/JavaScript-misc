@@ -101,3 +101,22 @@ table tr:first-child {
     object-fit: fill;
     object-position: left;
 }
+
+.indentation {
+    margin: 0px;
+}
+
+.indentation > * {
+    margin: 20px;
+}
+.test_position {
+    /*text-align: center;*/
+}
+
+.test_position  > * {
+    position: relative;
+    display: inline-block;
+    /*left: 200px;*/
+    /*width: fit-content;*/
+    margin: auto;
+}
