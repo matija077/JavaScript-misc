@@ -209,3 +209,47 @@ body {
   * + * {
       margin-top: 10px;
   }
+
+  .btn2 {
+    background-color: var(--color, blue);
+}
+
+  .btn {
+      --color: red;
+  }
+
+  .scrollbar {
+    width: 100px;
+    max-width: 200px;
+    display: inline-block;
+  }
+
+  .scrollbar:hover {
+      max-width: 400px;
+    overflow-y: scroll;
+  }
+
+  .testMargin{
+      --displayCustom: attr(data-id);
+
+  }
+
+  .testMargin >:nth-child(3) {
+    display: inline;
+    width: 100px;
+    margin: auto;
+}
+
+
+  .testMargin >:nth-child(1) {
+    display: block;
+    width: 100px;
+    margin: auto;
+  }
+  .testMargin >:nth-child(2) {
+      display: inline-block;
+      width: 100px;
+      margin: auto;
+}
+
+
