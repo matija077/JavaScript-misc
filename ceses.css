@@ -33,6 +33,7 @@ body {
 #prvi:hover {
     font-size: 50px;
     margin: 100px;
+    transition: font-size 5s
 }
 
 #drugi {
@@ -252,4 +253,13 @@ body {
       margin: auto;
 }
 
+
+.transitions {
+    transition: 1s;
+}
+
+:where(.transitions:hover) {
+    font-size: 40px;
+    transition: 6s;
+}
 

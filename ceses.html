@@ -121,14 +121,35 @@
         </div>
     </div>
 
+    <div class="transitions">Transitions</div>
+
+    <button id="history" onClick="window.history.pushState({a: 4}, '', 'id'); console.log(window.history.state);">history hange</button>
+    <button id="location" onClick="window.location.href = 'id' ">location change</button>
+    <button id="history" onClick="window.open('a')">window open</button>
+
 
 
     <script>
+        const t = document.body;
        const parent =  document.getElementById("test parent");
        console.dir(parent);
        parent.append(document.createElement("a"));
        parent.innerText = "aaa";
        console.dir(parent);
        console.dir(document.getElementById("left-child"));
+
+       t.addEventListener("click", () => console.log('click') )
+       t.addEventListener("mousedown", () => console.log('mosue enter') )
+       t.addEventListener("mouseup", () => console.log('mouse up') )
+       t.addEventListener("pointerover", (event) => {console.log('pointer over');   })
+       t.addEventListener("pointerdown", (event) => {console.log('pointer down');  })
+       t.addEventListener("pointerup", () => console.log('pointer up') )
+       t.addEventListener("touchstart",  (event) => {console.log('touch start');event.preventDefault() }, {passive: false})
+       t.addEventListener("touchmove", (event) => {console.log('touch move');  event.preventDefault() }, {passive: false})
+       t.addEventListener("touchend", (event) => {console.log('touch end');  event.preventDefault() }, {passive: false})
+       //t.addEventListener("touchMove", (event) => {console.log('touch start'); event.preventDefault() })
+       t.addEventListener("touchend", () => console.log('touch end') )
     </script>
 </body>
+
+//event.preventDefault();
