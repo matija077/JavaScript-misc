@@ -46,6 +46,32 @@ const getData = asyncAlt(function*() {
     return result;
 })
 
-getData().then((result) => {
+/*getData().then((result) => {
     console.log(result);
+})*/
+
+function customGenerator(func) {
+    const run = func();
+    let result = run.next();
+     while(!result.done) {
+        console.log(result.value);
+        if (result.value.then) {
+            console.log(result.value.then(r => console.log(r)));
+            result = run.next(result.value);
+        } else {
+
+        }
+    }
+    console.log(run.next());
+}
+
+const getData2 = customGenerator(function*() {
+    const response = yield fetch(url);
+    console.log(response);
+    const result = yield response.json();
+    return result;
 })
+
+getData2().then(function resolve(result) {
+    console.log(result);
+});

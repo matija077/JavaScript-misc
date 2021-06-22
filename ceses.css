@@ -207,9 +207,9 @@ body {
      max-height: 600px
   }
 
-  * + * {
+  /** + * {
       margin-top: 10px;
-  }
+  }*/
 
   .btn2 {
     background-color: var(--color, blue);
@@ -263,3 +263,35 @@ body {
     transition: 6s;
 }
 
+.flex {
+    display: flex;
+    width: 600px;
+}
+
+.flex > * {
+    all: initial;
+    flex: 1 1 0;
+}
+
+.middle {
+    padding: 20px;
+}
+
+.parentinos {
+    color: var(--test, red);
+    width: 200px;
+}
+
+.height {
+    --test: blue;
+}
+
+.heightChild {
+    height: 200px;
+    --test: green;
+}
+
+.widthChild {
+    display: inline-block;
+    width: 100px;
+}

@@ -84,3 +84,30 @@ const options = {
 
 const observer = new IntersectionObserver(callback, options)
 observer.observe(document.getElementById("outside"));
+
+const promise1 = new Promise(function(resolve, reject) {
+  setTimeout(
+    () => resolve('prvi'),
+    4000
+  );
+});
+
+const promise2 =  new Promise(function(resolve, reject) {
+  setTimeout(
+    () => resolve('rejected drugi'),
+    1000
+  );
+});
+
+const resolved = Promise.all([promise1, promise2]);
+resolved.then(function resolved(result) {
+  console.log(result);
+}).catch(function rejected(rejection) {
+  console.log(rejection);
+})
+.then(function resolved(result) {
+  console.log('may be rejected or not');
+  console.log(result);
+}).finally(() => {
+  console.log('tealaa');
+})
