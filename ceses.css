@@ -295,3 +295,11 @@ body {
     display: inline-block;
     width: 100px;
 }
+
+.fixed {
+    position: fixed;
+    width: 200px;
+    background-color: red;
+    margin: auto;
+    inset: 100px;
+}
