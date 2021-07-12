@@ -1,6 +1,42 @@
 <!DOCTYPe html>
 <html>
     <head>
-        <script src="./misc.js"></script>
+        <script src="./misc.js" type="module"></script>
     </head>
+    <body random="true" id="table">
+        <table>
+            <thead>
+                <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>first row valu</td>
+                    <td>first row valu2</td>
+                </tr>
+                <tr>
+                    <td>second row valu</td>
+                    <td>second row valu2</td>
+                </tr>
+            </tbody>
+            <thead>
+                <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+            </tr>
+            </thead>
+        </table>
+
+        <div class="aa" id="2"></div>
+
+        <script>
+            const el = document.getElementById("2");
+            console.dir(el.attributes)
+
+
+
+        </script>
+    </body>
 </html>

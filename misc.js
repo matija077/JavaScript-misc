@@ -1,4 +1,4 @@
-
+import {b} from './misc2.js';
   function Base() {
       this.a = 3;
   }
@@ -35,3 +35,5 @@
   const {a, b, c: cprop} = c;
   console.log(a);*/
 
+  b.a = 4;
+console.log(b)
